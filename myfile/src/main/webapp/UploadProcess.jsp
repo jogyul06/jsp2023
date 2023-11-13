@@ -1,5 +1,5 @@
-<%--@ page import="fileupload.MyfileDAO"--%>
-<%--@ page import="fileupload.MyfileDTO"--%>
+<%@ page import="fileupload.MyfileDAO"%>
+<%@ page import="fileupload.MyfileDTO"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="java.text.SimpleDateFormat"%>
 <%@ page import="java.io.File"%>
@@ -42,17 +42,17 @@ try {
     }
 
    // 5. DTO 생성
-   // MyfileDTO dto = new MyfileDTO();
-   // dto.setName(name);
-   // dto.setTitle(title);
-   // dto.setCate(cateBuf.toString());
-   // dto.setOfile(fileName);
-   // dto.setSfile(newFileName);
+    MyfileDTO dto = new MyfileDTO();
+    dto.setName(name);
+    dto.setTitle(title);
+    dto.setCate(cateBuf.toString());
+    dto.setOfile(fileName);
+    dto.setSfile(newFileName);
 
     // 6. DAO를 통해 데이터베이스에 반영
-    // MyfileDAO dao = new MyfileDAO();
-    // dao.insertFile(dto);
-    // dao.close();
+    MyfileDAO dao = new MyfileDAO();
+    dao.insertFile(dto);
+    dao.close();
 
    
 }
