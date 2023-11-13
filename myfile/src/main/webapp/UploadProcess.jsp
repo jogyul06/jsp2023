@@ -54,7 +54,9 @@ try {
     dao.insertFile(dto);
     dao.close();
 
-   
+
+    // 7. 파일 목록 JSP로 리디렉션
+    response.sendRedirect("FileList.jsp");
 }
 catch (Exception e) {
     e.printStackTrace();
